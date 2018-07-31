@@ -7,7 +7,7 @@
 * Rémi Samson
 * Christophe Leray
 
-## Lien vers l'application Heroku : [Heroku app](https://je-me-presente-christopheleray.herokuapp.com/)
+## Lien vers l'application Heroku : [Heroku app](https://thp-sitebackend-rennes.herokuapp.com/)
 
 ## Database stucture:
 Table user :
