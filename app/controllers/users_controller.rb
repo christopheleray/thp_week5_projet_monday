@@ -8,12 +8,12 @@ class UsersController < ApplicationController
   def create
     puts params.inspect
     puts "Token: #{params[:authenticity_token]}"
-    @user = User.create(username: params[:username], bio:params[:bio])
+    @user = User.create(username: params[:username], bio: params[:bio] )
     if @user.save
-      redirect_to "/profile/#{@user.username}"
-      else render '/users/errors'
-    end
-
+      redirect_to "/user/#{@user.username}"
+      else
+        render '/users/error'
+      end
     puts @user.username
     puts "on affiche depuis create"
   end

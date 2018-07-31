@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   post '/create', to: 'users#create', as: 'create_user'
   get '/contact', to: 'static_pages#contact', as: 'contact'
   get '/about', to: 'static_pages#about', as: 'about'
-  get '/users/(:id)', to: 'users#show', as: 'show'
+  get '/user/:id', to: 'users#show', as: 'show'
 end
