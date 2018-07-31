@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     puts "Token: #{params[:authenticity_token]}"
     @user = User.create(username: params[:username], bio:params[:bio])
     if @user.save
-      redirect_to action: 'show', id: @user.username
+      redirect_to "/profile/#{@user.username}"
       else render '/users/errors'
     end
 
@@ -22,8 +22,9 @@ class UsersController < ApplicationController
   def show
     puts Time.now
     puts "j'affiche depuis show"
-    puts "numéro de l'id #{params[:id].to_i}"
-    @user = User.find_by(params[:username])
+    @user = User.find_by(username: params[:id])
+    puts @user.username
+    puts @user.bio
   end
 
 end
